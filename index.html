@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishu's Real Estate Clone (responsive)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,100;1,200&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #0000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtnn{
+  background-color: #0000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+.dropbtnn a {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #686464;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e413f;
+}
+.show{
+  display: block;
+}
+.menu{
+  padding: 15px;
+}
+
+
+</style>
+<script>document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".dropbtn").addEventListener("click", function() {
+        document.querySelector(".dropdown-content").classList.toggle("show");
+    });
+
+    window.addEventListener("click", function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            let dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+  <header class="container">
+    <nav class="navigation flex">
+      <div class="menu-bar flex">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/npq9d4ny7bk8idfdlnqy/r3zkl0bugsm2c2ucjlji" alt="">
+          
+        </div>
+        <div class="menu">
+          <ul class="flex" style="color: black;">
+            <div class="dropdown">
+              <button class="dropbtn">PROPERTIES</button>
+              <div class="dropdown-content">
+                  <a href="#">FEATURED PROPERTIES</a>
+                  <a href="#">PAST TRANSATIONS</a>
+              </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">HOME SEARCH</button>
+            <div class="dropdown-content">
+                <a href="#">LEHI HOMES FOR SALE</a>
+                <a href="#">SARATOGA SPRINGS HOMES FOR SALE</a>
+                <a href="#">VINEYARD HOMES FOR SALE</a>
+                <a href="#">DRAPER UTAH CITY HOMES FOR SALE</a>
+                <a href="#">DAYBREAK HOMES FOR SALE</a>
+                <a href="#">PARK CITY HOMES FOR SALE</a>
+                <a href="#">MLS LISTING HOMES FOR SALE</a>
+
+            </div>
+            <div class="dropdown">
+              <button class="dropbtnn"><a href="./contact page/index.html">CONTACT</a></button>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtnn"><a href="">49534-35453</a></button>
+        </div>
+      
+    </nav>
+  </header>
+
+  <div class="video-wrapper">
+    <div class="full-screen-video-component">
+        <div class="video-wrapper hidable">
+            <video class="lazy" poster="https://res.cloudinary.com/luxuryp/videos/f_auto,q_auto/so_0,eo_0/eqxvtgwttminuwvztet9/mov_6721.jpg" style="height:100%;" loop="" muted="" autoplay="" playsinline>
+                <source data-src="https://res.cloudinary.com/luxuryp/videos/f_auto:video,q_auto/eqxvtgwttminuwvztet9/mov_6721.webm" type="video/webm">
+                <source data-src="https://res.cloudinary.com/luxuryp/videos/f_auto:video,q_auto/eqxvtgwttminuwvztet9/mov_6721.mp4" type="video/mp4">
+            </video>
+            <div class="text-overlay">
+              <h2>UTAH'S FINEST REALTORS</h2>
+              <p>Utah's Premier Luxury Real Estate Experts</p>
+              <div class="buttons">
+                <button class="btn browse">BROWSE HOMES</button>
+                <button class="btn quote">GET A QUOTE</button>
+              </div>
+            </div>
+        </div>
+        <div class="poster" style="background-image: url('https://res.cloudinary.com/luxuryp/videos/so_0,eo_0,f_auto,q_auto/eqxvtgwttminuwvztet9/mov_6721')"></div>
+    </div>
+</div>
+
+  <!-- <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="img/img1.jpg" alt="img1">
+      <div class="text-overlay">
+        <h2>UTAH'S FINEST REALTORS</h2>
+        <p>Utah's Premier Luxury Real Estate Experts</p>
+        <div class="buttons">
+          <button class="btn browse">BROWSE HOMES</button>
+          <button class="btn quote">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="img/img2.jpg">
+      <div class="text-overlay">
+        <h2>UTAH'S FINEST REALTORS</h2>
+        <p>Utah's Premier Luxury Real Estate Experts</p>
+        <div class="buttons">
+          <button class="btn browse">BROWSE HOMES</button>
+          <button class="btn quote">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="img/img4.jpg">
+      <div class="text-overlay">
+        <h2>UTAH'S FINEST REALTORS</h2>
+        <p>Utah's Premier Luxury Real Estate Experts</p>
+        <div class="buttons">
+          <button class="btn browse">BROWSE HOMES</button>
+          <button class="btn quote">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div class="img-container container">
+        <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/yxbf64av49zl1nlkkmig/team1" alt="">
+  </div>
+
+  <div class="img-container-logo container ">
+    <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/npq9d4ny7bk8idfdlnqy/r3zkl0bugsm2c2ucjlji" alt="">
+  </div>
+
+  <div class="about">
+    <h3>Giving Luxury Service At Every Price Point</h3>
+    <strong><h1>BEST REALTORS IN UTAH LUXURY REAL ESTATE AGENTS</h1></strong>
+    <p>Experience the beauty and diversity of Utah's real estate landscape with our team, via each trusted real estate agent. From the breathtaking natural wonders in Park City, to the dynamic urban hubs in Salt Lake City, Draper &Lehi, our expert guidance will help you find the perfect place to call home. Our Luxury Utah Realtors have a deep understanding of Utah's neighborhoods and market trends. As a result, we are here to ensure that you make informed decisions whether you're buying or selling.</p>
+  </div>
+
+  <section class="offer inner">
+      <div class="left">
+        <!-- img daalo -->
+        <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/mdjuixiare78bs22fevo/team2" class="bask" />
+      </div>
+    <div class="left right">
+      <h1>MEET THE TEAM</h1>
+      <p>
+        Providing each and every one of our clients with the best possible service and experience is our top priority.
+      </p>
+      <a href="#">MEET THE TEAM</a>
+
+    </div>
+  </section>
+
+
+  <div class="vish">
+    <div class="box">
+        <img src="https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/p0umdkewvrcjivs9m8n0/1" alt="box1">
+    </div>
+    <div class="box">
+        <img src="https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/xn88vjdwodf6jsel7sxk/2" alt="box2">
+    </div>
+    <div class="box">
+        <img src="https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/zzi4xh1le34liriu9rvf/3" alt="box3">
+    </div>
+
+  </div>
+
+  <div class="vish">
+    <section class="offer inner p">
+        <div class="left p" >
+          <!-- img daalo -->
+          <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/jigizy0lkl644vc8pya8/paige-headshot-1" class="bask" />
+        </div>
+      <div class="left right c p">
+        <h2>A True Expert</h2>
+        <h1>MEET PAIGE</h1>
+        <p>
+            With over 9 years of experience selling residential real estate, Paige has become one of the top-selling agents in the state of Utah. She prides herself on offering a white glove, full-service experience to both buyers and sellers with the help of her amazing team!
+        </p>
+        <a href="#">LEARN MORE</a>
+  
+      </div>
+    </section>
+  </div>
+
+  <div class="slider">
+    <div class="testimonial">
+        <h2>Achieving Dreams
+        </h2>
+        <h1>TESTIMONIALS</h1>
+    </div>
+
+    
+<section class="image-section is-font-color-light is-background-color-dark" id="section-e5c23ba4-3a88-489a-8c10-bf7de3cca123" data-el-id="1296c4a2-2800-4a54-95a4-c30fa6be4ba5">
+    <div class="testimonials redesign">
+        
+        <div class="container slider-container">
+            <div class="items-slider">
+                <div class="item">
+                    <div class="solid-subsection card" style="color: rgba(64, 64, 64, 1); background-color: rgba(255, 255, 255, 1);">
+                        <div class="top-block">
+                            <div class="userpic">
+                                <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ta9s5lyvc04xrtvgyoti/testimonial-logo-45" alt="Woolf&#x27;s" loading="lazy">
+                            </div>
+                            <h4 class="author">Woolf &#x27;s</h4>
+                            <blockquote class="testimonial-text">Buying or selling in todays market is stressful. April Berezay brought her knowledge and enthusiasm to sell our home fast at our desired selling price. April communicated with us often and kept us advised on listings and how to...</blockquote>
+                        </div>
+                        <a href="/testimonials" class="btn btn--primary-dark card-button button-style-3">Read More</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                  <div class="solid-subsection card" style="color: rgba(64, 64, 64, 1); background-color: rgba(255, 255, 255, 1);">
+                      <div class="top-block">
+                          <div class="userpic">
+                              <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ta9s5lyvc04xrtvgyoti/testimonial-logo-45" alt="Woolf&#x27;s" loading="lazy">
+                          </div>
+                          <h4 class="author">Woolf &#x27;s</h4>
+                          <blockquote class="testimonial-text">Buying or selling in todays market is stressful. April Berezay brought her knowledge and enthusiasm to sell our home fast at our desired selling price. April communicated with us often and kept us advised on listings and how to...</blockquote>
+                      </div>
+                      <a href="/testimonials" class="btn btn--primary-dark card-button button-style-3">Read More</a>
+                  </div>
+              </div>
+
+              <div class="item">
+                <div class="solid-subsection card" style="color: rgba(64, 64, 64, 1); background-color: rgba(255, 255, 255, 1);">
+                    <div class="top-block">
+                        <div class="userpic">
+                            <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ta9s5lyvc04xrtvgyoti/testimonial-logo-45" alt="Woolf&#x27;s" loading="lazy">
+                        </div>
+                        <h4 class="author">Woolf &#x27;s</h4>
+                        <blockquote class="testimonial-text">Buying or selling in todays market is stressful. April Berezay brought her knowledge and enthusiasm to sell our home fast at our desired selling price. April communicated with us often and kept us advised on listings and how to...</blockquote>
+                    </div>
+                    <a href="/testimonials" class="btn btn--primary-dark card-button button-style-3">Read More</a>
+                </div>
+            </div>
+
+            <div class="item">
+              <div class="solid-subsection card" style="color: rgba(64, 64, 64, 1); background-color: rgba(255, 255, 255, 1);">
+                  <div class="top-block">
+                      <div class="userpic">
+                          <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ta9s5lyvc04xrtvgyoti/testimonial-logo-45" alt="Woolf&#x27;s" loading="lazy">
+                      </div>
+                      <h4 class="author">Woolf &#x27;s</h4>
+                      <blockquote class="testimonial-text">Buying or selling in todays market is stressful. April Berezay brought her knowledge and enthusiasm to sell our home fast at our desired selling price. April communicated with us often and kept us advised on listings and how to...</blockquote>
+                  </div>
+                  <a href="/testimonials" class="btn btn--primary-dark card-button button-style-3">Read More</a>
+              </div>
+          </div>
+
+          <div class="item">
+            <div class="solid-subsection card" style="color: rgba(64, 64, 64, 1); background-color: rgba(255, 255, 255, 1);">
+                <div class="top-block">
+                    <div class="userpic">
+                        <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ta9s5lyvc04xrtvgyoti/testimonial-logo-45" alt="Woolf&#x27;s" loading="lazy">
+                    </div>
+                    <h4 class="author">Woolf &#x27;s</h4>
+                    <blockquote class="testimonial-text">Buying or selling in todays market is stressful. April Berezay brought her knowledge and enthusiasm to sell our home fast at our desired selling price. April communicated with us often and kept us advised on listings and how to...</blockquote>
+                </div>
+                <a href="/testimonials" class="btn btn--primary-dark card-button button-style-3">Read More</a>
+            </div>
+        </div>
+                <!-- Other testimonials items here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<d class="bb">
+    <h2>Find Your Dream Home</h2>
+    <h1>FEATURED PROPERTIES</h1>
+
+    <div class="forSale" style="color: rgb(255, 255, 255);">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="https://dlajgvw9htjpb.cloudfront.net/cms/4759079e-1b24-4700-b224-5d412f05c5e5/2000742/4904623951555901209.jpg" alt="img1">
+              <div class="text-overlay" style="color: rgb(255, 255, 255);">
+                <button>FOR SALE</button>
+                <h3>FEATURED PROPERTIES</h3>
+                <h3>$743,000</h3>
+                <h1>953 W SUMMIT TOP LANE LA</h1>
+                <h2>4523 Easter South Jordan , UT 840023 3BD</h2>
+                <p>Utah's Premier Luxury Real Estate Experts</p>
+                <div class="buttons">
+                  <button class="btn browse">LEARN MORE</button>
+              </div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://dlajgvw9htjpb.cloudfront.net/cms/4759079e-1b24-4700-b224-5d412f05c5e5/1902664/-4221536392251570569.jpg">
+              <div class="text-overlay" style="color: rgb(255, 255, 255);">
+                <button>FOR SALE</button>
+                <h3>FEATURED PROPERTIES</h3>
+                <h3>$743,000</h3>
+                <h1>953 W SUMMIT TOP LANE LA</h1>
+                <h2>4523 Easter South Jordan , UT 840023 3BD</h2>
+                <p>Utah's Premier Luxury Real Estate Experts</p>
+                <div class="buttons">
+                  <button class="btn browse">LEARN MORE</button>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="mySlides fade">
+              <img src="">
+            </div>
+          </div>
+    </div>
+</div>
+
+<!-- <div class="aa">
+    <h2>Learn about Life In Utah</h2>
+    <h1>AREAS OF EXPERTISE</h1>
+    <div class="imgg " >
+    <div class="box box1"><img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/hkkhrdv599s1zk4ls8e9/img_2255" alt="">
+        <div class="centered">
+            <h2>Salt Lake</h2>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="box box2"><img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/ywuypgur18mqpqotkgzs/shutterstock_1537714529" alt="">
+        <div class="centered">
+            <h2>Park City</h2>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="box box3"><img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/kjfti85atlltjfkff0pf/img_2254" alt="">
+        <div class="centered">
+            <h2>Summit County</h2>
+            <button>Learn More</button>
+        </div>
+    
+    </div>
+    <div class="box box4"><img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/sxmnte6ciacang9ghwbo/img_2251" alt="">Saratoga 
+        <div class="centered">
+            <h2>Saratoga</h2>
+            <button>Learn More</button>
+        </div></div>
+    </div>
+</div> -->
+
+
+<div class="aa">
+    <h2>Learn about Life In Utah</h2>
+    <h1>AREAS OF EXPERTISE</h1>
+</div>
+
+
+    <section class="offer inner box">
+        <div class="left c" >
+          <!-- img daalo -->
+          <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/sxmnte6ciacang9ghwbo/img_2251" class="bask" />
+          <div class="centered">
+            <h2>Salt Lake</h2>
+            <button>Learn More</button>
+        </div>
+        </div>
+        <div class="left right c box" >
+            <!-- img daalo -->
+            <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/kjfti85atlltjfkff0pf/img_2254" class="bask" />
+            <div class="centered">
+                <h2>Salt Lake</h2>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section class="offer inner  box">
+        <div class="left c" >
+          <!-- img daalo -->
+          <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/sxmnte6ciacang9ghwbo/img_2251" class="bask" />
+          <div class="centered">
+            <h2>Salt Lake</h2>
+            <button>Learn More</button>
+        </div>
+        </div>
+        <div class="left right c box" >
+            <!-- img daalo -->
+            <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/kjfti85atlltjfkff0pf/img_2254" class="bask" />
+            <div class="centered">
+                <h2>Salt Lake</h2>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+  
+
+    <div class="vv">
+        <button>View All</button>
+    </div>
+    <div class="fixed">
+        <p>"Paige was extremely hard-working, and was always there to help us when we needed it. She exceeded all of our expectations and found us a beautiful home, she was able to help educate us in the process and she was the best agent that we’ve had."</p>
+
+        <h2>BUYER</h2>
+    </div>
+
+
+    <div class="vish">
+        <section class="offer inner p">
+            <div class="left c p " >
+                <h2>Ordinary To Extraordinary</h2>
+            <h1>STAGING SERVICES</h1>
+            <p>
+                In the world of real estate, first impressions matter. Welcome to Our Staging Services section, where we transform your property into a captivating and irresistible showpiece. We understand the art of showcasing your home's full potential. Discover the power of professional staging and watch your property shine brighter than ever before.
+            </p>
+            <a href="#">SEE BEFORE AND AFTER</a>
+              
+            </div>
+          <div class="left right c p">
+            <!-- img daalo -->
+            <img src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/fklfyeeoz3ma5roc2grd/staging-services-1" class="bask" />
+      
+          </div>
+        </section>
+      </div>
+<div class="ll"> <h2>The Best Advice</h2>
+    <h1>FEATURED BLOG POSTS</h1></div>
+<div class="advice">
+       
+    <div class="advice-item">
+        <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/hcrwlg5m0q6jyf3y6sfz/header-photo" alt="">
+        <a href="https://utahsfinestrealtors.com/blog/mastering-the-closing-process-for-luxury-real-estate">MASTERING THE CLOSING PROCESS FOR LUXURY REAL ESTATE</a>
+        <p>Navigating the Intricacies of Luxury Real Estate Transactions with Precision and Expertise</p>
+    </div>
+    
+        
+    <div class="advice-item">
+        <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/b4pcz5jpn3kqzxss0dso/header-photo" alt="">
+        <a href="https://utahsfinestrealtors.com/blog/capitalizing-on-opportunities-luxury-properties-during-economic-downturns">MASTERING THE CLOSING PROCESS FOR LUXURY REAL ESTATE</a>
+        <p>Seizing value in Luxury Market: A strategic Guide for Buyers during Economic Downturns.</p>
+    </div>
+
+    <div class="advice-item">
+        <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/digjjbujezsh1jcftcez/header-photo" alt="">
+        <a href="https://utahsfinestrealtors.com/blog/revamping-versus-acquiring-deciding-on-your-dream-luxury-home">MAREVAMPING VERSUS ACQUIRING : DECIDING ON YOUR DREAM LUXURY HOME</a>
+        <p>Choosing between value in Luxury Market: A strategic Guide for Buyers during Economic Downturns.</p>
+    </div>
+</div>
+
+<div class="vv">
+    <button>View All</button>
+</div>
+
+<div class="info">
+    <h2>Get Access to More Real Estate Options</h2>
+    <h1>STAY UP TO DATE ON MARKET CONDITIONS AND LOCAK HAPPENINGS</h1>
+    <p>Are you interested in buying a home? Look no further than working with real estate experts.</p>
+    <input type="text" placeholder="Name">
+    <input type="text"  placeholder="Email">
+    <div class="vv">
+        <button>Submit</button>
+    </div>
+
+    <button type="checkbox">
+        By providing Utah's Finest Realtors your contact information, you acknowledge and agree to our Privacy Policy and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent isn’t necessary for purchasing any products or services and you may opt out at any time. To opt out from texts, you can reply, ‘stop’ at any time. To opt out from emails, you can click on the unsubscribe link in the emails. Message and data rates may apply.</button>
+
+</div>
+
+<div class="work">
+    <h1>WORK WITH US</h1><br>
+    <p>Providing each and every one of our clients with the best possible service and experience is our top priority. Our clients choose us because they want to work with the highest standards in the business.
+
+        By providing Utah's Finest Realtors your contact information, you acknowledge and agree to our Privacy Policy and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent isn’t necessary for purchasing any products or services and you may opt out at any time. To opt out from texts, you can reply, ‘stop’ at any time. To opt out from emails, you can click on the unsubscribe link in the emails. Message and data rates may apply.
+    </p>
+    <div class="vv" style="color: darkorange;">
+
+        <button>CONTACT US</button>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <h1>UTAH'S FINEST REALTORS</h1>
+        <div class="contact-info">
+            <div>
+                <p>GET TO KNOW US</p>
+            </div>
+            <div>
+                <p>EMAIL</p>
+                <a href="mailto:PAIGE@UTAHSFINESTREALTORS.COM">PAIGE@UTAHSFINESTREALTORS.COM</a>
+            </div>
+            <div>
+                <p>ADDRESS</p>
+                <p>1987 1100 E<br>SALT LAKE CITY, UT 84106</p>
+            </div>
+            <div>
+                <p>PHONE NUMBER</p>
+                <a href="tel:+17608017993">(760) 801-7993</a>
+            </div>
+        </div>
+        <div class="logos">
+            <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/tguwivacqib9bgbmkkgy/realtor-eho-logo-07232021-update-light" alt="Engel & Völkers" width="200">
+            <!-- <img src="https://cdn-5da61b42f911c80ca0ef7bb1.closte.com/wp-content/uploads/2019/05/NAR-Logo-White.png" alt="Realtor" width="100"> -->
+            <!-- <img src="https://www.hud.gov/sites/dfiles/PA/images/FHEO_logo.png" alt="Equal Housing Opportunity" width="100">
+        </div> -->
+        <div class="footer">
+            <p>All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+            <p>Real Estate Website Design by <a href="https://www.luxurypresence.com/" style="color: #fff; text-decoration: none;">Luxury Presence</a></p>
+            <p>&copy; 2024 | <a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a></p>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/LinkedIn_Logo.svg/768px-LinkedIn_Logo.svg.png" alt="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/TikTok_logo.svg/1920px-TikTok_logo.svg.png" alt="TikTok">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Google_Icon.png/1024px-Google_Icon.png" alt="Google">
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.items-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() { 
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdXNlfGVufDB8fDB8fHww') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.contact-details, .contact-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+.contact-details h2, .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-details h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-details p, .contact-form label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.contact-details i, .social-icons i {
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-icons a {
+    color: gold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid gold;
+}
+
+.contact-form button {
+    background: gold;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: darkgoldenrod;
+}

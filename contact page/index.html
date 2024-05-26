@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-details">
+            <h2>CONTACT DETAILS</h2>
+            <h3>UTAH'S FINEST REALTORS</h3>
+            <p><i class="fas fa-phone"></i> (760) 801-7993</p>
+            <p><i class="fas fa-envelope"></i> PAIGE@UTAHSFINESTREALTORS.COM</p>
+            <p><i class="fas fa-map-marker-alt"></i> 1987 1100 E, SALT LAKE CITY, UT 84106</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-podcast"></i></a>
+                <a href="#"><i class="fab fa-zillow"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>SUBMIT A MESSAGE</h2>
+            <form>
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">PHONE</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <p>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    By providing Utah's Finest Realtors your contact information, you acknowledge and agree to our <a href="#">Privacy Policy</a> and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent isn't necessary for purchasing any products or services and you may opt out at any time. To opt out from texts, you can reply, ‘stop’ at any time. To opt out from emails, you can click on the unsubscribe link in the emails. Message and data rates may apply.
+                </p>
+                
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
