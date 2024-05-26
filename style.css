@@ -322,7 +322,7 @@ body {
 }
 
 a{
-    color: #111;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -573,7 +573,7 @@ a{
   max-width: 100vh;
   max-height: 100vh;
   position: relative;
-  background-color: #313131;
+  background-color: #000000;
 }
 
 .vv{
